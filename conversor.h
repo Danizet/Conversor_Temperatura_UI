@@ -15,6 +15,10 @@ public:
     Conversor(QWidget *parent = nullptr);
     ~Conversor();
 
+public slots:
+    void cent2fahr(int grados);
+    void fahr2cent(int grados);
+
 private:
     Ui::Conversor *ui;
 };

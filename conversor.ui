@@ -82,6 +82,9 @@ background-color: rgb(32, 74, 135);</string>
          <string notr="true">color: rgb(32, 74, 135);
 background-color: rgb(92, 53, 102);</string>
         </property>
+        <property name="intValue" stdset="0">
+         <number>32</number>
+        </property>
        </widget>
       </item>
       <item>
@@ -95,6 +98,12 @@ background-color: rgb(143, 89, 2);</string>
         </property>
         <property name="maximum">
          <number>210</number>
+        </property>
+        <property name="sliderPosition">
+         <number>32</number>
+        </property>
+        <property name="notchTarget">
+         <double>11.699999999999999</double>
         </property>
        </widget>
       </item>
