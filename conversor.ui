@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>638</width>
-    <height>377</height>
+    <width>825</width>
+    <height>567</height>
    </rect>
   </property>
   <property name="font">
@@ -22,6 +22,10 @@
   <property name="windowTitle">
    <string>Conversor</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="recursos.qrc">
+    <normaloff>:/recursos/img/icono.png</normaloff>:/recursos/img/icono.png</iconset>
+  </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
   </property>
@@ -29,145 +33,259 @@
    <string notr="true">color: rgb(186, 189, 182);
 background-color: rgb(0, 0, 0);</string>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
-    <widget class="QGroupBox" name="groupBox">
+    <widget class="QLabel" name="label">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Frank Ruhl Hofshi</family>
+       <pointsize>28</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>ForbiddenCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(46, 52, 54);</string>
+      <string notr="true">color: rgb(255, 85, 127);</string>
      </property>
-     <property name="title">
-      <string>Centigrados</string>
+     <property name="text">
+      <string>Conversor</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_2" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <property name="topMargin">
+       <number>0</number>
+      </property>
       <item>
-       <widget class="QLCDNumber" name="outCent">
-        <property name="cursor">
-         <cursorShape>BlankCursor</cursorShape>
-        </property>
+       <widget class="QGroupBox" name="groupBox">
         <property name="styleSheet">
-         <string notr="true">color: rgb(138, 226, 52);
+         <string notr="true">background-color: rgb(46, 52, 54);</string>
+        </property>
+        <property name="title">
+         <string>Centigrados</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLCDNumber" name="outCent">
+           <property name="cursor">
+            <cursorShape>BlankCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(138, 226, 52);
 font: italic 11pt &quot;Ubuntu Condensed&quot;;
 background-color: rgb(32, 74, 135);</string>
-        </property>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDial" name="inCent">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(115, 210, 22);</string>
+           </property>
+           <property name="minimum">
+            <number>-18</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
       <item>
-       <widget class="QDial" name="inCent">
+       <widget class="QGroupBox" name="groupBox_3">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(115, 210, 22);</string>
+         <string notr="true">background-color: rgb(46, 52, 54);</string>
         </property>
-        <property name="minimum">
-         <number>-18</number>
+        <property name="title">
+         <string>Kelvin</string>
         </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="groupBox_2">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(46, 52, 54);</string>
-     </property>
-     <property name="title">
-      <string>Fahrenheit</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QLCDNumber" name="outFah">
-        <property name="cursor">
-         <cursorShape>BlankCursor</cursorShape>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(32, 74, 135);
-background-color: rgb(92, 53, 102);</string>
-        </property>
-        <property name="intValue" stdset="0">
-         <number>32</number>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QDial" name="inFah">
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(193, 125, 17);
-background-color: rgb(143, 89, 2);</string>
-        </property>
-        <property name="maximum">
-         <number>210</number>
-        </property>
-        <property name="value">
-         <number>32</number>
-        </property>
-        <property name="sliderPosition">
-         <number>32</number>
-        </property>
-        <property name="notchTarget">
-         <double>3.699999999999999</double>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="groupBox_3">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(46, 52, 54);</string>
-     </property>
-     <property name="title">
-      <string>Kelvin</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_3">
-      <item>
-       <widget class="QLCDNumber" name="outKel">
-        <property name="cursor">
-         <cursorShape>BlankCursor</cursorShape>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(78, 154, 6);
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLCDNumber" name="outKel">
+           <property name="cursor">
+            <cursorShape>BlankCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(78, 154, 6);
 background-color: rgb(193, 125, 17);</string>
+           </property>
+           <property name="intValue" stdset="0">
+            <number>273</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDial" name="inKel">
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(117, 80, 123);
+background-color: rgb(164, 0, 0);</string>
+           </property>
+           <property name="minimum">
+            <number>255</number>
+           </property>
+           <property name="maximum">
+            <number>372</number>
+           </property>
+           <property name="value">
+            <number>273</number>
+           </property>
+           <property name="sliderPosition">
+            <number>273</number>
+           </property>
+           <property name="notchTarget">
+            <double>3.699999999999999</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(46, 52, 54);</string>
         </property>
-        <property name="intValue" stdset="0">
-         <number>273</number>
+        <property name="title">
+         <string>Fahrenheit</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLCDNumber" name="outFah">
+           <property name="cursor">
+            <cursorShape>BlankCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(32, 74, 135);
+background-color: rgb(92, 53, 102);</string>
+           </property>
+           <property name="intValue" stdset="0">
+            <number>32</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDial" name="inFah">
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(193, 125, 17);
+background-color: rgb(143, 89, 2);</string>
+           </property>
+           <property name="maximum">
+            <number>210</number>
+           </property>
+           <property name="value">
+            <number>32</number>
+           </property>
+           <property name="sliderPosition">
+            <number>32</number>
+           </property>
+           <property name="notchTarget">
+            <double>3.699999999999999</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="maximumSize">
+      <size>
+       <width>1000</width>
+       <height>220</height>
+      </size>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>256</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QGraphicsView" name="graphicsView">
+        <property name="maximumSize">
+         <size>
+          <width>800</width>
+          <height>400</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/recursos/img/1.jpg);</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QDial" name="inKel">
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
         </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(117, 80, 123);
-background-color: rgb(164, 0, 0);</string>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>256</width>
+          <height>20</height>
+         </size>
         </property>
-        <property name="minimum">
-         <number>255</number>
-        </property>
-        <property name="maximum">
-         <number>372</number>
-        </property>
-        <property name="value">
-         <number>273</number>
-        </property>
-        <property name="sliderPosition">
-         <number>273</number>
-        </property>
-        <property name="notchTarget">
-         <double>3.699999999999999</double>
-        </property>
-       </widget>
+       </spacer>
       </item>
      </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;a href=&quot;https://www.flaticon.es/iconos-gratis/alta-temperatura&quot; title=&quot;alta-temperatura iconos&quot;&gt;Alta-temperatura iconos creados por riajulislam - Flaticon&lt;/a&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="recursos.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>inCent</sender>
